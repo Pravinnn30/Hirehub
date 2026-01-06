@@ -1,0 +1,36 @@
+# =========================
+# Sensitive configuration
+# =========================
+config.properties
+*.env
+
+# =========================
+# Build / compiled output
+# =========================
+/target/
+*.class
+
+# =========================
+# IntelliJ IDEA
+# =========================
+.idea/
+*.iml
+.smarttomcat/
+
+# =========================
+# Eclipse (if ever used)
+# =========================
+.project
+.classpath
+.settings/
+
+# =========================
+# Tomcat / Server files
+# =========================
+conf/
+webapps/
+logs/
+temp/
+work/
+*.log
+

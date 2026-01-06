@@ -1,0 +1,472 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ================= HEADER WRAPPER ================= */
+#tp {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+/* ================= TOP BAR ================= */
+.top-bar {
+    background-color: #1e293b; /* Dark navy */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40px;
+}
+
+/* LOGO */
+#logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+#logo:hover {
+    color: #fde047;
+}
+
+/* LOGIN BUTTONS */
+.login-mode button {
+    margin-left: 10px;
+    padding: 6px 16px;
+    font-weight: 500;
+}
+
+.login-mode .btn-outline-success {
+    color: #22c55e;
+    border-color: #22c55e;
+}
+
+.login-mode .btn-outline-success:hover {
+    background-color: #22c55e;
+    color: #fff;
+}
+
+.login-mode .btn-outline-info {
+    color: #38bdf8;
+    border-color: #38bdf8;
+}
+
+.login-mode .btn-outline-info:hover {
+    background-color: #38bdf8;
+    color: #fff;
+}
+.login-mode span{
+    color: white;
+}
+
+/* ================= BOTTOM NAVBAR ================= */
+
+/* Override Bootstrap background */
+.bottom-bar {
+    background-color:#1e293b !important; /* Purple */
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Nav links */
+.bottom-bar .nav-link {
+    color:  #e5e7eb !important;
+    font-weight: 500;
+    margin-right: 15px;
+}
+
+.bottom-bar .nav-link:hover {
+    color: #2563eb !important;
+}
+
+/* Active / focus / hover underline that matches link width */
+.bottom-bar .nav-link {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 6px; /* space for underline */
+}
+
+.bottom-bar .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: #2563eb;
+    transition: transform 180ms ease-in-out, opacity 180ms ease-in-out;
+    opacity: 0;
+    transform-origin: center;
+}
+
+.bottom-bar .nav-link.active,
+.bottom-bar .nav-link:focus,
+.bottom-bar .nav-link:hover {
+    color: #2563eb !important;
+}
+
+.bottom-bar .nav-link.active::after,
+.bottom-bar .nav-link:focus::after,
+.bottom-bar .nav-link:hover::after {
+    transform: translateX(-50%) scaleX(1);
+    opacity: 1;
+}
+
+/* Search input */
+.bottom-bar .form-control {
+    /* border-radius: 20px; */
+    padding: 6px 14px;
+    width: 200px;
+}
+/* Search button */
+.bottom-bar .btn-outline-success {
+    border-color: #22c55e;
+    color: #22c55e;
+}
+
+.bottom-bar .btn-outline-success:hover {
+    background-color: #22c55e;
+    color: white;
+}
+
+/* Mobile toggle icon fix */
+.navbar-toggler {
+    border-color: #1e293b;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* Compact login-mode styles (used for small screens) */
+.login-mode.compact {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.login-mode.compact #loginCompactBtn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+.login-mode .compact-menu {
+    position: absolute;
+    right: 16px;
+    top: 56px;
+    background: white;
+    color: #111;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    padding: 10px;
+    z-index: 1200;
+    min-width: 160px;
+}
+
+.login-mode .compact-menu a,
+.login-mode .compact-menu button,
+.login-mode .compact-menu span {
+    display: block;
+    margin: 6px 0;
+}
+
+/* ================= HERO / WELCOME SECTION ================= */
+
+.hero-section {
+    background: linear-gradient(to right, #0d6efd, #6610f2);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.hero-section p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.hero-buttons a {
+    margin: 10px;
+    padding: 12px 30px;
+    font-size: 18px;
+}
+
+/* ================= FEATURES SECTION ================= */
+
+.features {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+}
+
+.feature-box {
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+}
+
+.feature-box h4 {
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background-color: #212529;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* ================= RESPONSIVE RULES ================= */
+/* Make layout adapt well to smaller screens */
+@media (max-width: 768px) {
+    .top-bar {
+        padding: 10px 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    #logo {
+        font-size: 20px;
+    }
+
+    .login-mode {
+        align-self: flex-end;
+    }
+
+    .bottom-bar .container-fluid {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .bottom-bar .form-control {
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    .hero-section {
+        padding: 40px 12px;
+    }
+
+    .hero-section h1 {
+        font-size: 28px;
+    }
+
+    .features {
+        padding: 30px 12px;
+    }
+
+    .feature-box {
+        padding: 18px;
+    }
+
+    /* Job cards: stack details vertically on small screens */
+    .job-card {
+        padding: 16px;
+    }
+
+    .job-card .d-flex {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+
+    .det {
+        display: block;
+    }
+
+    .job-title {
+        font-size: 18px;
+    }
+
+    .bottom-bar .nav-link {
+        margin-right: 8px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-bar { padding: 8px 12px; }
+    #logo { font-size: 18px; }
+    .hero-section h1 { font-size: 22px; }
+    .bottom-bar .form-control { padding: 6px 10px; }
+}
+
+/* Responsive rules for index.jsp hero and feature boxes */
+@media (max-width: 992px) {
+    .hero {
+        height: auto;
+        padding: 80px 12px;
+        background-position: center top;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+        line-height: 1.05;
+    }
+
+    .hero p { font-size: 18px; }
+
+    .hero-buttons a { padding: 10px 22px; font-size: 16px; }
+
+    .features { padding: 40px 12px; }
+    .feature-box { padding: 20px; }
+}
+
+@media (max-width: 576px) {
+    .hero h1 { font-size: 28px; }
+    .hero p { font-size: 16px; }
+    .hero-buttons a { padding: 8px 16px; font-size: 14px; }
+    .feature-box { padding: 16px; }
+}
+
+/* Responsive for addjob form */
+@media (max-width: 992px) {
+    .job-form-container {
+        max-width: 720px;
+        /* margin: 20px 12px; */
+        padding: 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    .job-form-container {
+        max-width: 96%;
+        margin: 16px 8px;
+        padding: 16px;
+    }
+
+    .job-form-container h3 { font-size: 20px; }
+    .job-form-container label { font-size: 14px; }
+    .job-form-container .form-control,
+    .job-form-container .form-select,
+    .job-form-container textarea { font-size: 15px; }
+    .btn-submit { padding: 10px 12px; }
+}
+
+/* Signup form responsive styles */
+.signup-card {
+	margin: 40px auto;
+	background: white;
+	padding: 40px;
+	border-radius: 12px;
+	width: 100%;
+	max-width: 420px;
+	box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.signup-card h3 { text-align: center; margin-bottom: 20px; }
+
+.form-control { height: 44px; }
+.btn-custom { height: 44px; }
+
+@media (max-width: 768px) {
+	.signup-card { padding: 28px; margin: 24px 12px; max-width: 96%; }
+	.signup-card h3 { font-size: 20px; }
+}
+
+@media (max-width: 480px) {
+	.signup-card { padding: 18px; }
+	.form-control { height: 42px; font-size: 15px; }
+	.btn-custom { height: 42px; font-size: 15px; }
+}
+
+/* login css */
+* {
+    font-family: "Poppins", sans-serif;
+}
+.login-card {
+    margin: 50px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.login-card h3 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.form-control {
+    height: 40px;
+}
+
+.message {
+    height: 160px;
+}
+
+.btn-login {
+    width: 100%;
+    height: 45px;
+    font-weight: 600;
+}
+.mb-3 {
+    margin-bottom: 28px !important;
+}
+.extra-links {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.extra-links a {
+    text-decoration: none;
+    color: #0d6efd;
+    font-size: 18px;
+}
+
+.extra-links a:hover {
+    text-decoration: underline;
+}
+
+.error-msg {
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Responsive tweaks for login form */
+@media (max-width: 480px) {
+    .login-card {
+        margin: 20px 12px;
+        padding: 24px;
+        max-width: 96%;
+    }
+
+    .login-card h3 {
+        font-size: 20px;
+    }
+
+    .form-control { height: 44px; }
+    .btn-login { height: 44px; }
+}
