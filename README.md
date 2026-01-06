@@ -13,7 +13,7 @@ The application allows job seekers to search and apply for jobs using normal and
 
 # Technologies Used:
 
-Java, JSP, Servlets, Hibernate, JSTL, MySQL, HTML, CSS, JavaScript, Apache Tomcat
+Java, JSP, Servlets, Hibernate, JSTL, MySQL, HTML, CSS, JavaScript, Maven, Apache Tomcat
 
 # Future Goals
 
